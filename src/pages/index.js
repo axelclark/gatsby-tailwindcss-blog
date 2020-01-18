@@ -1,11 +1,12 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import PageTitle from "../components/page_title";
 import SEO from "../components/seo";
 
-function IndexPage() {
+const IndexPage = ({ data }) => {
+  const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
       <SEO
@@ -13,8 +14,29 @@ function IndexPage() {
         title="Home"
       />
       <PageTitle />
+      {edges.map(edge => {
+        const { frontmatter } = edge.node;
+        return <div key={frontmatter.path}>{frontmatter.title}</div>;
+      })}
     </Layout>
   );
-}
+};
+
+export const query = graphql`
+  query HomepageQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date
+            excerpt
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
