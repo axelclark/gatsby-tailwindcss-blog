@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`
+    title: `Axel Clark`,
+    description: `A blog about programming and innovation.`,
+    author: `Axel Clark`
   },
   plugins: [
     `gatsby-transformer-remark`,

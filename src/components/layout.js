@@ -8,7 +8,7 @@ function Layout({ children }) {
     <div className="flex flex-col font-sans min-h-screen text-gray-900">
       <Header />
 
-      <main className="flex flex-col flex-1 md:justify-center max-w-4xl mx-auto px-4 py-8 md:p-8 w-full">
+      <main className="flex flex-col flex-1 max-w-4xl mx-auto px-4 py-8 md:p-8 w-full">
         {children}
       </main>
 
@@ -20,16 +20,7 @@ function Layout({ children }) {
               className="font-bold no-underline text-white"
               href="https://bryant.io"
             >
-              Taylor Bryant
-            </a>
-          </p>
-
-          <p>
-            <a
-              className="font-bold no-underline text-white"
-              href="https://github.com/taylorbryant/gatsby-starter-tailwind"
-            >
-              GitHub
+              Axel Clark
             </a>
           </p>
         </nav>
