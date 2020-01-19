@@ -1,3 +1,57 @@
 @tailwind base;
+
+.markdown h1 {
+  @apply text-xl font-bold mb-2 leading-tight;
+}
+
+.markdown h2 {
+  @apply text-lg font-medium mb-1 leading-tight;
+}
+
+.markdown h3 {
+  @apply text-base font-medium mb-1 leading-tight;
+}
+
+
+.markdown blockquote {
+  @apply text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-600;
+}
+
+.markdown p {
+  @apply leading-relaxed mb-4;
+}
+
+.markdown ol {
+  @apply mb-4 list-decimal leading-loose list-outside pl-5;
+}
+
+.markdown ul {
+  @apply mb-4 list-disc leading-loose list-outside pl-5;
+}
+
+.markdown li {
+  @apply leading-normal my-1;
+}
+
+.markdown a {
+  @apply text-green-800 font-semibold;
+}
+
+.markdown a:hover {
+  @apply underline;
+}
+
+.markdown table {
+  @apply text-base border-gray-600;
+}
+
+.markdown th {
+  @apply border py-1 px-3;
+}
+
+.markdown td {
+  @apply border py-1 px-3;
+}
+
 @tailwind components;
 @tailwind utilities;

@@ -10,9 +10,9 @@ const Template = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div>
+      <div className="markdown">
         <h1>{title}</h1>
-        <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="blog-post" dangerouslySetInnerHTML={{ __html: html }} />
         {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
         <br />
         {next && <Link to={next.frontmatter.path}>Next</Link>}
