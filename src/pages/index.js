@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/layout";
 import PageTitle from "../components/page_title";
@@ -16,7 +16,11 @@ const IndexPage = ({ data }) => {
       <PageTitle />
       {edges.map(edge => {
         const { frontmatter } = edge.node;
-        return <div key={frontmatter.path}>{frontmatter.title}</div>;
+        return (
+          <div key={frontmatter.path}>
+            <Link to={frontmatter.path}>{frontmatter.title}</Link>
+          </div>
+        );
       })}
     </Layout>
   );
