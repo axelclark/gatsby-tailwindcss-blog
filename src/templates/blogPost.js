@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import Layout from "../components/layout.js";
 
 const Template = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
@@ -8,13 +9,15 @@ const Template = ({ data, pageContext }) => {
   const html = markdownRemark.html;
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-      {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
-      <br />
-      {next && <Link to={next.frontmatter.path}>Next</Link>}
-    </div>
+    <Layout>
+      <div>
+        <h1>{title}</h1>
+        <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+        {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
+        <br />
+        {next && <Link to={next.frontmatter.path}>Next</Link>}
+      </div>
+    </Layout>
   );
 };
 
