@@ -22,6 +22,9 @@ const IndexPage = ({ data }) => {
           </div>
         );
       })}
+      <div>
+        <Link to="/tags">Browse by Tag</Link>
+      </div>
     </Layout>
   );
 };
