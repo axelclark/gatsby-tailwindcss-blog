@@ -31,7 +31,24 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        purgeOnly: [`src/css/style.css`]
+        purgeOnly: [`src/css/style.css`],
+        whitelist: [
+          `code`,
+          `pre`,
+          `dd`,
+          `dl`,
+          `h3`,
+          `h4`,
+          `h5`,
+          `h6`,
+          `ol`,
+          `table`,
+          `td`,
+          `th`,
+          `markdown`,
+          `gatsby-highlight`,
+          `language-text`
+        ]
       }
     },
     `gatsby-plugin-offline`,
