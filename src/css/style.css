@@ -1,25 +1,25 @@
 @tailwind base;
 
 .markdown h1 {
-  @apply text-xl font-bold mb-2 leading-tight;
+  @apply text-2xl font-bold mb-6 leading-tight;
 }
 .markdown h2 {
-  @apply text-lg font-medium mb-1 mt-6 leading-tight;
+  @apply text-xl font-bold text-black mt-10 leading-tight;
 }
 .markdown h3 {
-  @apply text-base font-medium mb-1 mt-4 leading-tight;
+  @apply text-lg font-medium text-black mt-8 -mb-2 leading-tight;
 }
 .markdown p {
-  @apply leading-relaxed mb-4;
+  @apply leading-relaxed mt-4;
 }
 .markdown ol {
-  @apply mb-4 list-decimal leading-loose list-outside pl-5;
+  @apply mt-4 list-decimal leading-loose list-outside pl-5;
 }
 .markdown ul {
-  @apply mb-4 list-disc leading-loose list-outside pl-5;
+  @apply mt-4 list-disc leading-loose list-outside pl-5;
 }
 .markdown li {
-  @apply leading-normal my-1;
+  @apply leading-normal mt-2;
 }
 .markdown a {
   @apply text-green-800 font-semibold;
@@ -44,7 +44,7 @@
 }
 
 .gatsby-highlight pre {
-  @apply text-xs !important;
+  @apply text-xs mt-2 !important;
 }
 
 .language-text {
