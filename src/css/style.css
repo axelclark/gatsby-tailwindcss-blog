@@ -42,12 +42,15 @@
 .markdown pre {
   @apply block bg-black p-4 rounded;
 }
+.markdown .gatsby-resp-image-wrapper {
+  @apply mt-4;
+}
 
-.gatsby-highlight pre {
+.markdown .gatsby-highlight pre {
   @apply text-xs mt-2 !important;
 }
 
-.language-text {
+.markdown .language-text {
   @apply text-xs !important;
 }
 
