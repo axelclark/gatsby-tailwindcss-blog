@@ -86,7 +86,8 @@ Many books and tutorials are available online for free, but if I find them usefu
 
 ### JavaScript/React/Redux:  Beginner
 * [A Smarter Way to Learn JavaScript](https://www.amazon.com/Smarter-Way-Learn-JavaScript-technology-ebook/dp/B00H1W9I6C):  Make sure you actually do the exercises. I could tell I was getting it when I could go through the exercises without consciously thinking about them.
-#### Intermediate
+
+### JavaScript/React/Redux:  Intermediate
 * [You Don’t Know JavaScript](https://github.com/getify/You-Dont-Know-JS) by Kyle Simpson([@getify](https://twitter.com/getify)):  Excellent resource, but gets down in the weeds.  I go back to it to learn concepts when I want to get a more in depth understanding.
 * [React Tutorial](https://facebook.github.io/react/tutorial/tutorial.html) and [Redux Tutorial](http://redux.js.org/) by Dan Abramov([@dan_abramov](https://twitter.com/dan_abramov)):  Very good introduction to these libraries.
 * [ReactJS Redux, the Right Way](https://reactjs.co/#basic-preface):  This site has an excellent path for learning React & Redux.
