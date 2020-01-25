@@ -1,8 +1,10 @@
 ---
-title: "Home Weather Display with Nerves and GrovePi"
-date: "2017-06-05T18:01:54.343Z"
 layout: post
+title: "Home Weather Display with Nerves and GrovePi"
+date: "2017-06-05"
 path: "/home-weather-display-project/"
+excerpt: "Learn how easy it is to get started with Nerves and GrovePi. The project reads a digital humidity and temperature (DHT) sensor and updates a RGB LCD display with the data. "
+tags: ["programming", "elixir"]
 ---
 
 Last year, when I first discovered you can use Elixir with [Nerves Project](http://nerves-project.org/)

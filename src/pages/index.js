@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 
 import Layout from "../components/layout";
-import PageTitle from "../components/page_title";
+import PostItem from "../components/PostItem";
 import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => {
@@ -13,14 +13,10 @@ const IndexPage = ({ data }) => {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-      <PageTitle />
+      <h1 className="text-3xl mb-6">Recent Posts</h1>
       {edges.map(edge => {
         const { frontmatter } = edge.node;
-        return (
-          <div key={frontmatter.path}>
-            <Link to={frontmatter.path}>{frontmatter.title}</Link>
-          </div>
-        );
+        return <PostItem frontmatter={frontmatter} />;
       })}
       <div>
         <Link to="/tags">Browse by Tag</Link>
@@ -37,7 +33,7 @@ export const query = graphql`
           frontmatter {
             title
             path
-            date
+            date(formatString: "YYYY-MM-DD")
             excerpt
           }
         }
