@@ -1,5 +1,8 @@
 @tailwind base;
 
+.markdown {
+  @apply max-w-xl
+}
 .markdown h1 {
   @apply text-2xl font-bold mb-6 leading-tight;
 }
@@ -52,6 +55,24 @@
 
 .markdown .language-text {
   @apply text-xs !important;
+}
+
+@screen md {
+  .markdown {
+    @apply self-center;
+  }
+  .markdown h1 {
+    @apply text-4xl mb-12;
+  }
+  .markdown h2 {
+    @apply text-2xl mb-6;
+  }
+  .markdown h3 {
+    @apply text-xl;
+  }
+  .markdown p {
+    @apply leading-normal;
+  }
 }
 
 @tailwind components;

@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <header className="bg-gray-700">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-4 md:p-4">
+      <div className="flex flex-wrap items-center justify-between max-w-2xl mx-auto p-4 md:p-4">
         <Link className="flex items-center no-underline text-white" to="/">
           <span className="font-bold text-xl tracking-tight">
             {site.siteMetadata.title}
