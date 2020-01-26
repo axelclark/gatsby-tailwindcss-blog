@@ -8,7 +8,7 @@ function Footer() {
           Created by{` `}
           <a
             className="font-bold no-underline text-white"
-            href="https://bryant.io"
+            href="https://github.com/axelclark"
           >
             Axel Clark
           </a>
