@@ -1,16 +1,16 @@
 @tailwind base;
 
 .markdown {
-  @apply max-w-xl
+  @apply max-w-xl font-light;
 }
 .markdown h1 {
-  @apply text-2xl font-bold mb-6 leading-tight;
+  @apply text-2xl font-semibold mb-6 leading-tight;
 }
 .markdown h2 {
-  @apply text-xl font-bold text-black mt-10 leading-tight;
+  @apply text-xl font-semibold text-black mt-10 leading-tight;
 }
 .markdown h3 {
-  @apply text-lg font-medium text-black mt-8 -mb-2 leading-tight;
+  @apply text-lg text-black mt-8 -mb-2 leading-tight;
 }
 .markdown p {
   @apply leading-relaxed mt-4;
@@ -62,13 +62,13 @@
     @apply self-center;
   }
   .markdown h1 {
-    @apply text-4xl mb-12;
+    @apply text-4xl mb-12 font-normal;
   }
   .markdown h2 {
-    @apply text-2xl mb-6;
+    @apply text-2xl mb-6 font-light;
   }
   .markdown h3 {
-    @apply text-xl;
+    @apply text-xl font-light;
   }
   .markdown p {
     @apply leading-normal;
