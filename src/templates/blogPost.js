@@ -12,10 +12,22 @@ const Template = ({ data, pageContext }) => {
     <Layout>
       <div className="markdown">
         <h1>{title}</h1>
-        <div className="blog-post" dangerouslySetInnerHTML={{ __html: html }} />
-        {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
-        <br />
-        {next && <Link to={next.frontmatter.path}>Next</Link>}
+        <div
+          className="blog-post mb-16"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        <div>
+          {next && (
+            <Link className="btn btn-gray mr-2" to={next.frontmatter.path}>
+              Prev
+            </Link>
+          )}
+          {prev && (
+            <Link className="btn btn-gray" to={prev.frontmatter.path}>
+              Next
+            </Link>
+          )}
+        </div>
       </div>
     </Layout>
   );

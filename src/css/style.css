@@ -25,7 +25,7 @@
   @apply leading-normal mt-2;
 }
 .markdown a {
-  @apply text-green-800 font-semibold;
+  @apply text-gray-800 font-bold;
 }
 .markdown a:hover {
   @apply underline;
@@ -73,6 +73,16 @@
   .markdown p {
     @apply leading-normal;
   }
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-gray {
+  @apply bg-gray-500 text-white;
+}
+.btn-gray:hover {
+  @apply bg-gray-700;
 }
 
 @tailwind components;
