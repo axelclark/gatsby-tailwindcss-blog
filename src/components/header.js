@@ -1,22 +1,39 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+import Img from "gatsby-image";
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
+  const data = useStaticQuery(graphql`
+    query headerQuery {
       site {
         siteMetadata {
           title
         }
       }
+      fileName: file(relativePath: { eq: "images/clark_profile.jpg" }) {
+        childImageSharp {
+          fixed(width: 35, height: 35) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
+  console.log(data);
+  const { site } = data;
 
   return (
     <header className="bg-gray-800">
       <div className="flex flex-wrap items-center justify-between max-w-2xl mx-auto p-4 md:p-4">
         <Link className="flex items-center no-underline text-white" to="/">
+          <Img
+            alt=""
+            className="mr-3 rounded"
+            fixed={data.fileName.childImageSharp.fixed}
+            objectFit="cover"
+            objectPosition="50% 50%"
+          />
           <span className="font-bold text-xl tracking-tight">
             {site.siteMetadata.title}
           </span>
