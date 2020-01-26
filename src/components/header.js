@@ -61,15 +61,11 @@ function Header() {
           {[
             {
               route: `/`,
-              title: `Home`
+              title: `Posts`
             },
             {
               route: `/about`,
               title: `About`
-            },
-            {
-              route: `/contact`,
-              title: `Contact`
             }
           ].map(link => (
             <Link

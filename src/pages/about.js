@@ -2,7 +2,6 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import dogIllustration from "../images/dog-illustration.svg";
 
 function AboutPage() {
   return (
@@ -13,23 +12,26 @@ function AboutPage() {
       />
 
       <section className="flex flex-col md:flex-row items-center">
-        <div className="md:w-2/3 md:mr-8">
-          <blockquote className="border-l-4 border-gray-900 font-serif leading-loose pl-4 text-justify">
-            The point is... to live one's life in the full complexity of what
-            one is, which is something much darker, more contradictory, more of
-            a maelstrom of impulses and passions, of cruelty, ecstacy, and
-            madness, than is apparent to the civilized being who glides on the
-            surface and fits smoothly into the world.
-          </blockquote>
-
-          <cite className="font-bold mt-4 text-right text-xs uppercase block">
-            – Thomas Nagel
-          </cite>
+        <div className="markdown">
+          <h1>Who is Axel?</h1>
+          <p>
+            I live and work in New Jersey. I program mostly in Elixir and
+            JavaScript.
+          </p>
+          <p>
+            I also co-host the{` `}
+            <a href="https://soundcloud.com/noisecancellingpod">
+              Noise Cancelling Pod
+            </a>
+            , a podcast about streamlining life, encouraging discourse, and
+            appreciating each other.
+          </p>
+          <p>
+            You can contact or follow me on{` `}
+            <a href="https://twitter.com/axelclark2">Twitter</a> or{` `}
+            <a href="https://github.com/axelclark">GitHub</a>.
+          </p>
         </div>
-
-        <figure className="w-2/3 md:w-1/3">
-          <img alt="A dog relaxing" src={dogIllustration} />
-        </figure>
       </section>
     </Layout>
   );
