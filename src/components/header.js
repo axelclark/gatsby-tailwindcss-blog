@@ -24,7 +24,7 @@ function Header() {
   const { site } = data;
 
   return (
-    <header className="bg-gray-800">
+    <header className="bg-purple-900">
       <div className="flex flex-wrap items-center justify-between max-w-2xl mx-auto p-4 md:p-4">
         <Link className="flex items-center no-underline text-white" to="/">
           <Img

@@ -25,7 +25,7 @@
   @apply leading-normal mt-2;
 }
 .markdown a {
-  @apply text-gray-800 font-bold;
+  @apply text-purple-800 font-bold;
 }
 .markdown a:hover {
   @apply underline;
