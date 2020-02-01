@@ -22,8 +22,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#4dc0b5`,
-        display: `minimal-ui`
-        // icon: ``
+        display: `minimal-ui`,
+        icon: `src/images/favicon-32x32.png`
       }
     },
     `gatsby-plugin-postcss`,
