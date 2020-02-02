@@ -58,9 +58,6 @@
 }
 
 @screen md {
-  .markdown {
-    @apply self-center;
-  }
   .markdown h1 {
     @apply text-4xl mb-12 font-normal;
   }
