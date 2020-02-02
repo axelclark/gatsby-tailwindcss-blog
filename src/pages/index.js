@@ -13,8 +13,8 @@ const IndexPage = ({ data }) => {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-      <h1 className="text-3xl font-light mt-4 mb-6 text-gray-600">
-        Recent Posts
+      <h1 className="text-3xl font-light mt-4 mb-6 text-indigo-500">
+        Latest Posts
       </h1>
       {edges.map(edge => {
         const { frontmatter } = edge.node;
