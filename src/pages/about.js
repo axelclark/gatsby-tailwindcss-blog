@@ -13,10 +13,11 @@ function AboutPage() {
 
       <section className="flex flex-col items-center">
         <div className="markdown">
-          <h1>Who is Axel?</h1>
+          <h1>Hi, my name is Axel.</h1>
           <p>
-            I live and work in New Jersey. I program mostly in Elixir and
-            JavaScript.
+            I live and work in New Jersey. For my day job, I'm an officer in the
+            Air Force who manages procurement. I program in my off-time for fun,
+            mostly in Elixir and JavaScript.
           </p>
           <p>
             I also co-host the{` `}
