@@ -8,13 +8,19 @@ const AllTagsTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div>
+      <div className="markdown md:self-start">
+        <h1>Find Posts by Tag</h1>
         <div>
-          <ul>
+          <ul className="list-disc list-outside px-8">
             {tags.map((tagName, index) => {
               return (
                 <li key={index}>
-                  <Link to={`/tags/${tagName}`}>{tagName}</Link>
+                  <Link
+                    className="text-lg text-indigo-700 font-bold mt-8 -mb-2 leading-tight hover:underline"
+                    to={`/tags/${tagName}`}
+                  >
+                    {tagName}
+                  </Link>
                 </li>
               );
             })}

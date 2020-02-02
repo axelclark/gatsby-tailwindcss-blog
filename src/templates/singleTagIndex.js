@@ -9,7 +9,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
   return (
     <Layout>
       <div>
-        <h1 className="text-3xl font-light mt-4 mb-6 text-gray-600">
+        <h1 className="text-3xl font-light mt-4 mb-6 text-indigo-500">
           Posts about {`${tagName}`}
         </h1>
         <div>
