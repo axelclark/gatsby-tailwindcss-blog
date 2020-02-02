@@ -11,7 +11,7 @@ function AboutPage() {
         title="About"
       />
 
-      <section className="flex flex-col md:flex-row items-center">
+      <section className="flex flex-col items-center">
         <div className="markdown">
           <h1>Who is Axel?</h1>
           <p>
