@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout.js";
+import SEO from "../components/seo";
 
 const Template = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
@@ -10,6 +11,10 @@ const Template = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO
+        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        title={title}
+      />
       <div className="markdown">
         <h1>{title}</h1>
         <div

@@ -1,13 +1,17 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import PostItem from "../components/PostItem";
+import SEO from "../components/seo";
 
 const SingleTagTemplate = ({ data, pageContext }) => {
   const { posts, tagName } = pageContext;
   return (
     <Layout>
+      <SEO
+        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        title={`${tagName} tags`}
+      />
       <div>
         <h1 className="text-3xl font-light mt-4 mb-6 text-indigo-500">
           Posts about {`${tagName}`}

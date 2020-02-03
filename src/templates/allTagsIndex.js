@@ -2,12 +2,17 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const AllTagsTemplate = ({ data, pageContext }) => {
   const { tags } = pageContext;
 
   return (
     <Layout>
+      <SEO
+        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        title="Tags"
+      />
       <div className="markdown md:self-start">
         <h1>Find Posts by Tag</h1>
         <div>
