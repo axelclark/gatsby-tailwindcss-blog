@@ -8,7 +8,7 @@ function Footer() {
           See the{` `}
           <a
             className="font-bold text-white hover:underline"
-            href="https://github.com/axelclark"
+            href="https://github.com/axelclark/gatsby-tailwindcss-blog"
           >
             code
           </a>
