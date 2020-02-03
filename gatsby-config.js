@@ -17,13 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `Axel Clark`,
+        short_name: `Axel`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#4dc0b5`,
+        theme_color: `#3c366b`,
         display: `minimal-ui`,
-        icon: `src/images/favicon-32x32.png`
+        icon: `src/images/axelclark_icon.png`
       }
     },
     `gatsby-plugin-postcss`,
