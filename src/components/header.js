@@ -20,7 +20,6 @@ function Header() {
       }
     }
   `);
-  console.log(data);
   const { site } = data;
 
   return (
