@@ -13,7 +13,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
         title={`${tagName} tags`}
       />
       <div>
-        <h1 className="text-3xl font-light mt-4 mb-6 text-indigo-500">
+        <h1 className="text-3xl font-light mt-4 mb-6 text-indigo-600">
           Posts about {`${tagName}`}
         </h1>
         <div>
