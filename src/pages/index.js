@@ -39,6 +39,7 @@ export const query = graphql`
             path
             date(formatString: "YYYY-MM-DD")
             excerpt
+            tags
           }
         }
       }
