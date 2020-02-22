@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Axel Clark`,
     description: `A blog about programming and innovation.`,
-    author: `Axel Clark`
+    author: `Axel Clark`,
+    siteUrl: `https://axelclark.com`
   },
   plugins: [
     `gatsby-transformer-remark`,
@@ -156,6 +157,7 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    `gatsby-plugin-feed`
   ]
 };
