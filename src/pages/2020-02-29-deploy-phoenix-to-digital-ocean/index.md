@@ -8,9 +8,12 @@ tags: ["programming", "elixir"]
 ---
 In the past, I've used either [Heroku](https://www.heroku.com) or [Gigalixir](https://www.gigalixir.com) to deploy my [Elixir](https://elixir-lang.org) / [Phoenix](https://www.phoenixframework.org) projects. I wanted to learn how to deploy using Elixir releases (available in Elixir 1.9+) and [Docker](https://www.docker.com).  I decided to use [Digital Ocean](https://www.digitalocean.com) because I read it is a little easier to set up than [AWS](https://aws.amazon.com).
 
-I used a number of resources to deploy my project, this post covers the steps to get a Phoenix project with a Postgres database deployed on Digital Ocean using Elixir Releases and Docker.
+I'll go through the steps to get a Phoenix project with a Postgres database deployed on Digital Ocean using Elixir Releases and Docker.
 
 ## Resources
+
+I used a number of resources to deploy my project:
+
 * [Deploying with Releases (Phoenix Guide)](https://hexdocs.pm/phoenix/releases.html#content)
 * [Release a Phoenix application with Docker and Postgres](https://medium.com/@j.schlacher_32979/release-a-phoenix-application-with-docker-and-postgres-28c6ae8c7184), blog post by Jan Peter
 * [Docker - Get Started Guide](https://docs.docker.com/get-started/)
@@ -184,10 +187,11 @@ defmodule DockerPhx.Release do
 end
 ```
 
-Once you've completed those sections, you should be able to test your app with
-the following commands.
+If you are using the file as a template, you only need to change the first two lines.
 
-Start by dropping the existing database and creating a new database to test the release command.  Then build release, migrate database, and start server.
+Once you've completed those sections, you should be able to test your app with the following commands.
+
+Drop the existing database and create a new database, so you can test the release command.  Then build release, migrate database, and start server.
 
 ```bash
 docker_phx $ mix ecto.drop
@@ -301,8 +305,12 @@ ENV HOME=/app
 CMD ["bash", "/app/entrypoint.sh"]
 ```
 
-Then add the Docker entrypoint script which makes sure Postgres is ready, runs the
-migrations, and starts the application.
+If you are using the file as a template in your project, update this line:
+```bash
+COPY --from=build /app/_build/prod/rel/docker_phx .
+```
+
+Then add the Docker entrypoint script which makes sure Postgres is ready, runs the migrations, and starts the application.
 
 ```bash
 # File: docker_phx/entrypoint.sh
@@ -325,7 +333,13 @@ eval "$bin eval \"DockerPhx.Release.migrate\""
 exec "$bin" "start"
 ```
 
-Add `config/docker.env` to hold environmental variables. The environmental variables below are for you `config`, `entrypoint.sh`, and postgres service.
+If you are using the file as a template in your project, update these lines:
+```bash
+bin="/app/bin/hello_docker"
+eval "$bin eval \"DockerPhx.Release.migrate\""
+```
+
+Add `config/docker.env` to hold environmental variables. The environmental variables below are for your `config`, `entrypoint.sh`, and postgres service.
 
 ```bash
 SECRET_KEY_BASE=REALLY_LONG_SECRET
@@ -383,6 +397,11 @@ services:
       - webnet
 ```
 
+If you are using the file as a template in your project, update this line to match your project and version:
+```bash
+    image: docker_phx:0.1.0
+```
+
 Before we build our image, we need to edit our `config/prod.exs` to update the port to 4000. The `docker-compose.yml` file has the container port 4000 mapped to the host (or Digital Ocean droplet) port 80.
 
 ```elixir
@@ -422,9 +441,9 @@ app_1  | 18:23:28.189 [info] Running DockerPhxWeb.Endpoint with cowboy 2.7.0 at 
 app_1  | 18:23:28.190 [info] Access DockerPhxWeb.Endpoint at http://localhost:4000
 ```
 
-Now visit `localhost/users` to see the index of users. NOTE: after we changed the url port, you will now vist `localhost` instead of `localhost:4000`
+Now visit `localhost/users` to see the index of users. NOTE: after we changed the url port, you will now visit `localhost` instead of `localhost:4000`
 
-To shutdown your system use Ctr-C and `docker-compose down`:
+To shutdown your system use Ctrl-C and `docker-compose down`:
 
 ```bash
 ^CGracefully stopping... (press Ctrl+C again to force)
