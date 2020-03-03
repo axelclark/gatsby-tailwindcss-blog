@@ -10,9 +10,21 @@ In the past, I've used either [Heroku](https://www.heroku.com) or [Gigalixir](ht
 
 I'll go through the steps to get a Phoenix project with a Postgres database deployed on Digital Ocean using Elixir Releases and Docker.
 
+## Overview
+
+Here are the steps we'll cover to deploy the project:
+
+1. [Create new Phoenix project](#create-new-phoenix-project)
+2. [Add users resource with Phoenix generator](#add-users-resource-with-phoenix-generator)
+3. [Build, configure, & start your release with Mix](#build-configure--start-your-release-with-mix)
+4. [Build release with Docker](#build-release-with-docker)
+5. [Deploy to Digital Ocean with Docker](#deploy-to-digital-ocean-with-docker)
+
+I published the project to GitHub [here](https://github.com/axelclark/docker_phx) with a commit for each section.
+
 ## Resources
 
-I used a number of resources to deploy my project:
+I used a number of resources to deploy my project and create this guide:
 
 * [Deploying with Releases (Phoenix Guide)](https://hexdocs.pm/phoenix/releases.html#content)
 * [Release a Phoenix application with Docker and Postgres](https://medium.com/@j.schlacher_32979/release-a-phoenix-application-with-docker-and-postgres-28c6ae8c7184), blog post by Jan Peter
@@ -33,21 +45,9 @@ To follow this guide, make sure you have at least the following applications ins
 
 Make sure to install at least Elixir 1.9.
 
-## Overview
-
-Here are the steps we'll cover to deploy the project:
-
-* Create new Phoenix project
-* Add users resource with Phoenix generator
-* Build, configure, & start your release with Mix
-* Build release with Docker
-* Deploy to Digital Ocean with Docker
-
-I published the project to GitHub [here](https://github.com/axelclark/docker_phx) with a commit for each section.
-
 ## Create new Phoenix project
 
-I'm going to call this project DockerPhx, so create a new Phoenix project:
+To begin, I'm going to call this project DockerPhx, so create a new Phoenix project:
 
 ```bash
 $ mix phx.new docker_phx
