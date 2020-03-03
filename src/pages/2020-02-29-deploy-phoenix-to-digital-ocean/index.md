@@ -16,7 +16,7 @@ Here are the steps we'll cover to deploy the project:
 
 1. [Create new Phoenix project](#create-new-phoenix-project)
 2. [Add users resource with Phoenix generator](#add-users-resource-with-phoenix-generator)
-3. [Build, configure, & start your release with Mix](#build-configure--start-your-release-with-mix)
+3. [Build, configure, & start your release](#build-configure--start-your-release)
 4. [Build release with Docker](#build-release-with-docker)
 5. [Deploy to Digital Ocean with Docker](#deploy-to-digital-ocean-with-docker)
 
@@ -121,9 +121,9 @@ Now start your server with `mix phx.server`and visit `http://localhost:4000/user
 
 We'll use this basic project to test both our app and database are deployed properly.
 
-## Build, configure, & start your release with Mix
+## Build, configure, & start your release
 
-To build, configure and start your release with Mix, we're going to borrow the steps from the Phoenix [Deploying with Releases](https://hexdocs.pm/phoenix/releases.html#content) guide.
+To build, configure and start your release, we're going to borrow the steps from the Phoenix [Deploying with Releases](https://hexdocs.pm/phoenix/releases.html#content) guide.
 
 ### [Releases, assemble!](https://hexdocs.pm/phoenix/releases.html#releases-assemble)
 
