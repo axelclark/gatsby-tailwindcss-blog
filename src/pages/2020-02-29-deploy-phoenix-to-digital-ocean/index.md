@@ -327,7 +327,7 @@ do
   sleep 2
 done
 
-bin="/app/bin/hello_docker"
+bin="/app/bin/docker_phx"
 eval "$bin eval \"DockerPhx.Release.migrate\""
 # start the elixir application
 exec "$bin" "start"
@@ -335,7 +335,7 @@ exec "$bin" "start"
 
 If you are using the file as a template in your project, update these lines:
 ```bash
-bin="/app/bin/hello_docker"
+bin="/app/bin/docker_phx"
 eval "$bin eval \"DockerPhx.Release.migrate\""
 ```
 
