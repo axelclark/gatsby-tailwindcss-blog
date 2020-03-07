@@ -539,8 +539,8 @@ root@droplet $ mkdir -p ~/etc/docker_phx/config
 Now that the directory has been created, copy the `docker-compose.yml` and `docker.env` files from your project folder to the droplet.
 
 ```bash
-docker_phx $ scp ./config/docker.env root@<ip address of droplet>:/etc/docker_phx/config/docker.env
-docker_phx $ scp ./docker-compose.yml root@<ip address of droplet>:/etc/docker_phx/docker-compose.yml
+docker_phx $ scp ./config/docker.env root@<ip address of droplet>:~/etc/docker_phx/config/docker.env
+docker_phx $ scp ./docker-compose.yml root@<ip address of droplet>:~/etc/docker_phx/docker-compose.yml
 ```
 
 The final step is to initialize Docker Swarm and deploy our stack from the droplet:
