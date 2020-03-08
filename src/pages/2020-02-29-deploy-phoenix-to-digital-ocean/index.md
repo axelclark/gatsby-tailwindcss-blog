@@ -561,6 +561,6 @@ root@droplet etc/docker_phx $ docker-compose up
 
 For additional info on updating new versions of your application, check out the [Deploying to Digital Ocean](https://hexdocs.pm/distillery/guides/deploying_to_digital_ocean.html#deploying-new-versions-of-the-application) section of the Distillery guide.
 
-Congratulations, you've deployed a Phoenix project with a database to Digital Ocean!
+Congratulations, you've deployed a Phoenix project with a database to Digital Ocean! Check out my next post if you are interested in how to [Continuously Deploy Phoenix to Digital Ocean with GitHub Actions](/continuous-deployment-github-actions/).
 
 This was my first time working with Docker and Digital Ocean, so I welcome any of your suggested improvements to this guide. Thanks!
