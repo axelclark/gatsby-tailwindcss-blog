@@ -7,11 +7,13 @@ const Template = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   const { markdownRemark } = data;
   const title = markdownRemark.frontmatter.title;
+  const description = markdownRemark.frontmatter.excerpt;
   const html = markdownRemark.html;
 
   return (
     <Layout>
       <SEO
+        description={description}
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title={title}
       />
@@ -44,6 +46,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        excerpt
       }
     }
   }
