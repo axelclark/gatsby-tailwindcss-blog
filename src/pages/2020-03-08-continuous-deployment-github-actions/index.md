@@ -24,7 +24,7 @@ If you didn't make it all the way through the [last post](/deploy-phoenix-to-dig
 
 ## Mix Test
 
-The first step in the workflow will be to run our automated test suite when we push code to GitHub to hopefully reduce the bugs in production.  With continuous deployment, if the tests pass after pushing changes to you GitHub master branch, the changes will automatically get deployed to production.
+The first step in the workflow will be to run our automated test suite when we push code to GitHub to hopefully reduce the bugs in production.  With continuous deployment, if the tests pass after pushing changes to your GitHub master branch, the changes will automatically get deployed to production.
 
 GitHub Actions allow you to start with a [preconfigured workflow template](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates#adding-your-first-workflow-template). We'll use the template for Elixir.
 
